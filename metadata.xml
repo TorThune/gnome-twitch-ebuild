@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<maintainer status="active">
+			<name>Vincent</name>
+			<email>vinszent@vinszent.com</email>
+		</maintainer>
+		<bugs-to>https://github.com/vinszent/gnome-twitch/issues</bugs-to>
+		<changelog>https://github.com/vinszent/gnome-twitch/releases</changelog>
+		<remote-id type="github">gnome-twitch</remote-id>
+	</upstream>
+	<maintainer type="person">
+		<name>Tor Arne Thune</name>
+		<email>jclt9@devia.org</email>
+	</maintainer>
+</pkgmetadata>
