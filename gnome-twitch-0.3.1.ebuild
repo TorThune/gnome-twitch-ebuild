@@ -47,7 +47,7 @@ RDEPEND="${DEPEND}
 			>=media-libs/clutter-gtk-1.0
 		)
 		mpv? (
-			media-video/mpv
+			media-video/mpv[libmpv]
 		)
 		dev-libs/libpeas
 		dev-libs/gobject-introspection"
