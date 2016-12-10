@@ -4,6 +4,8 @@
 
 EAPI=6
 
+inherit gnome2-utils fdo-mime
+
 DESCRIPTION="Enjoy Twitch on your GNU/Linux desktop"
 HOMEPAGE="http://gnome-twitch.vinszent.com/"
 SRC_URI="https://github.com/vinszent/gnome-twitch/archive/v${PV}.tar.gz"
@@ -45,7 +47,7 @@ RDEPEND="${DEPEND}
 			>=media-libs/clutter-gtk-1.0
 		)
 		mpv? (
-			media-video/mpv
+			media-video/mpv[libmpv]
 		)
 		dev-libs/libpeas
 		dev-libs/gobject-introspection"
@@ -80,8 +82,19 @@ src_install() {
 	dodoc ${DOCS}
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+	gnome2_schemas_savelist
+}
+
 pkg_postinst() {
-	glib-compile-schemas "/usr/share/glib-2.0/schemas"
-	update-desktop-database -q
-	gtk-update-icon-cache -q -t -f "/usr/share/icons/hicolor"
+	gnome2_schemas_update 
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
+	fdo-mime_desktop_database_update
+	gnome2_schemas_update 
 }
