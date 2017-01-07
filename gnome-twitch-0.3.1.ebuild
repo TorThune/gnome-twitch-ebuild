@@ -88,7 +88,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	gnome2_schemas_update 
+	gnome2_schemas_update
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
 }
@@ -96,5 +96,5 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
-	gnome2_schemas_update 
+	gnome2_schemas_update
 }
