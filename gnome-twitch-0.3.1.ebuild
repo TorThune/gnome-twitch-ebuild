@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -88,7 +88,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	gnome2_schemas_update 
+	gnome2_schemas_update
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
 }
@@ -96,5 +96,5 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
-	gnome2_schemas_update 
+	gnome2_schemas_update
 }
