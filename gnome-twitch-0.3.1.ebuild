@@ -25,21 +25,21 @@ RDEPEND="${DEPEND}
 		net-libs/webkit-gtk
 		gst-cairo? (
 			media-libs/gstreamer
-			media-plugins/gst-plugins-ffmpeg
+			media-plugins/gst-plugins-libav
 			media-libs/gst-plugins-base
 			media-libs/gst-plugins-good
 			media-libs/gst-plugins-bad
 		)
 		gst-opengl? (
 			media-libs/gstreamer
-			media-plugins/gst-plugins-ffmpeg
+			media-plugins/gst-plugins-libav
 			media-libs/gst-plugins-base
 			media-libs/gst-plugins-good
 			media-libs/gst-plugins-bad
 		)
 		gst-clutter? (
 			media-libs/gstreamer
-			media-plugins/gst-plugins-ffmpeg
+			media-plugins/gst-plugins-libav
 			media-libs/gst-plugins-base
 			media-libs/gst-plugins-good
 			media-libs/gst-plugins-bad
